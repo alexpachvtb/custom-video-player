@@ -16,16 +16,15 @@
                 <source src="assets/video/forsage.mp4" type="video/mp4">
               </video>
               <div class="video__controls">
-                <button class="video__controls-prev video__btn" id="prev"><img src="assets/icons/controls/prev.svg" alt="prev"></button>
                 <button class="video__controls-playpause video__btn" id="play"><img src="assets/icons/controls/play.svg" alt="play"></button>
                 <button class="video__controls-playpause video__btn hidden" id="pause"><img src="assets/icons/controls/pause.svg" alt="pause"></button>
-                <button class="video__controls-next video__btn"><img src="assets/icons/controls/next.svg" alt="next"></button>
-                <input class="video__time" type="range">
+                <input class="video__time" type="range" step="0.05">
+                <div class="video__rate">1.0</div>
                 <button class="video__controls-volume video__btn"><img src="assets/icons/controls/volume.svg" alt="volume"></button>
-                <input class="video__volume" type="range">
-                <button class="video__controls-fullscreen video__btn"><img src="assets/icons/controls/fullscreen.svg" alt="fullscreen"></button>
+                <input class="video__volume" type="range" min="0" max="100" value="100">
+                <button class="video__controls-fullscreen video__btn" id="fullscreen"><img src="assets/icons/controls/fullscreen.svg" alt="fullscreen"></button>
               </div>
-              <button class="video__controls-play video__btn"><img src="assets/icons/controls/bigplay.png" alt="play"></button>
+              <button class="video__controls-bigplay video__btn" id="bigplay"><img src="assets/icons/controls/bigplay.png" alt="play"></button>
             </div>
           </div>
         </section
