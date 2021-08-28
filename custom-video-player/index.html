@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Custom Video Player</title>
+</head>
+<body>
+    <main class="main">
+        <section class="video" id="video">
+          <div class="container">
+            <div class="video__player">
+              <video class="video__screen" id="video-player" poster="assets/img/forsage.jpg">
+                <source src="assets/video/forsage.mp4" type="video/mp4">
+              </video>
+              <div class="video__controls">
+                <button class="video__controls-prev video__btn" id="prev"><img src="assets/icons/controls/prev.svg" alt="prev"></button>
+                <button class="video__controls-playpause video__btn" id="play"><img src="assets/icons/controls/play.svg" alt="play"></button>
+                <button class="video__controls-playpause video__btn hidden" id="pause"><img src="assets/icons/controls/pause.svg" alt="pause"></button>
+                <button class="video__controls-next video__btn"><img src="assets/icons/controls/next.svg" alt="next"></button>
+                <input class="video__time" type="range">
+                <button class="video__controls-volume video__btn"><img src="assets/icons/controls/volume.svg" alt="volume"></button>
+                <input class="video__volume" type="range">
+                <button class="video__controls-fullscreen video__btn"><img src="assets/icons/controls/fullscreen.svg" alt="fullscreen"></button>
+              </div>
+              <button class="video__controls-play video__btn"><img src="assets/icons/controls/bigplay.png" alt="play"></button>
+            </div>
+          </div>
+        </section
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

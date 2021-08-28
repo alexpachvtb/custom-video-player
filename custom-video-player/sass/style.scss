@@ -1,0 +1,19 @@
+@import 'libs/normalize';
+@import 'libs/fonts';
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 1140px;
+    box-sizing: border-box;
+}
+
+@import 'block/video';
