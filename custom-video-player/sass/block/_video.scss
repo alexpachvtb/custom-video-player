@@ -1,16 +1,18 @@
 .video {
-    padding: 80px 80px;
+    margin-top: 50px;
     &__screen {
+        border-radius: 10px 10px 0 0;
         width: 100%;
-        height: 570px;
+        height: 450px;
         background-color: #000;
         object-fit: cover;
     }
     &__controls {
         margin-top: -5px;
         width: 100%;
-        height: 85px;
-        background-color: #000;
+        height: 60px;
+        background-color: #057329;
+        border-radius: 0 0 10px 10px;
         display: flex;
         padding: 0 30px 0 30px;
         justify-content: space-between;
@@ -19,7 +21,9 @@
         }
         &-playpause img{
             width: 24px;
-            height: 31px;
+        }
+        img {
+            height: 25px;
         }
     }
     &__btn {
@@ -37,7 +41,11 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 30%;
+        top: 26%;
+        img {
+            width: 150px;
+            height: 150px;
+        }
     }
     &__time {
         width: 64%;

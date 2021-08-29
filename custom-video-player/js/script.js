@@ -34,6 +34,9 @@ progress.addEventListener('change', () => {
 
 video.addEventListener('timeupdate', () => {
     progress.value = (video.currentTime / video.duration) * 100;
+    if (progress.value == 100) {
+        pauseVideo();
+    }
 });
 
 volume.addEventListener('input', () => {
@@ -45,7 +48,7 @@ volumeBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('keydown', (e) => {
-    if (e.code == 'Space') {
+    if (e.code == 'Space' || e.code == 'KeyK') {
         if (video.paused) {
             playVideo();
         } else {
@@ -84,22 +87,41 @@ document.addEventListener('keydown', (e) => {
             video.playbackRate = range_counter;
         }
     }
+    if (e.code == 'Home') {
+        e.preventDefault();
+        if (video.paused) {
+            playVideo();
+        }
+        progress.value = 0;
+        video.currentTime = (progress.value * video.duration) / 100;
+    }
+    if (e.code == 'End') {
+        progress.value = 100;
+        video.currentTime = (progress.value * video.duration) / 100;
+        video.pause();
+    }
 });
 
 function playVideo () {
-    visibleButtons();
     video.play();
+    visibleButtons();
 }
 
 function pauseVideo () {
-    visibleButtons();
     video.pause();
+    visibleButtons();
 }
 
 function visibleButtons() {
-    play.classList.toggle('hidden');
-    pause.classList.toggle('hidden');
-    bigplay.classList.toggle('hidden');
+    if (video.paused) {
+        play.classList.remove('hidden');
+        pause.classList.add('hidden');
+        bigplay.classList.remove('hidden');
+    } else {
+        play.classList.add('hidden');
+        pause.classList.remove('hidden');
+        bigplay.classList.add('hidden');
+    }
 }
 
 function openFullScreen(element) {
@@ -110,7 +132,6 @@ function openFullScreen(element) {
     } else if(element.mozRequestFullscreen) {
       element.mozRequestFullScreen();
     }
-    console.log(document.fullscreenElement);
 }
 
 function closeFullscreen(element) {

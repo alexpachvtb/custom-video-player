@@ -9,10 +9,14 @@
     scroll-behavior: smooth;
 }
 
+html {
+    background-color: #1488ba;
+}
+
 .container {
     position: relative;
     margin: 0 auto;
-    width: 1140px;
+    width: 940px;
     box-sizing: border-box;
 }
 
